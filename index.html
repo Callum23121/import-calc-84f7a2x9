@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aussie Import Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="loginScreen" class="overlay">
+    <div class="login-box">
+      <h2>🔒 Aussie Import Calculator</h2>
+      <input type="password" id="passwordInput" placeholder="Enter password"/>
+      <button onclick="checkPassword()">Enter</button>
+    </div>
+  </div>
+
+  <!-- APP -->
+  <div id="app" class="hidden">
+
+    <header>
+      <h1>🇦🇺 Aussie Import Calculator</h1>
+      <p>Calculate your true landed import cost</p>
+    </header>
+
+    <div class="container">
+
+      <div class="card">
+        <h2>Vehicle Details</h2>
+        <input id="vehicleName" placeholder="Vehicle name (e.g. 1995 F-250)"/>
+      </div>
+
+      <div class="card">
+        <h2>Costs</h2>
+
+        <input id="purchasePrice" type="number" placeholder="Purchase Price"/>
+        <input id="freight" type="number" placeholder="Freight Cost"/>
+
+        <input id="exchangeRate" type="number" value="1" placeholder="Exchange Rate (USD to AUD)"/>
+      </div>
+
+      <div class="card">
+        <h2>Results</h2>
+
+        <div id="results">
+          Enter values to calculate.
+        </div>
+
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="reset()">Reset</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
